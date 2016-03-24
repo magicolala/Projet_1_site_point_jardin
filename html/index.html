@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	    <title>Point Jardin</title>
+	
+	    <meta name="description" content="Point Jardin ǀ Matériaux et déco: paillage minéral,végétal, galet, gravier, bâche, bloc ardoise, engrais, gazon, terre végétale, terreau, dalle, sablon, grave">
+	    <meta name="author" content="Cédric et Augustin">
+		
+	    <link href="css/bootstrap.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+	    <link href="css/style1.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	    <div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row header">
+						<div class="col-md-2">
+							<a><img class="logo" src="images/logo.jpg" alt="LOGO"></a>
+							<p class="horaires"><strong>Du lundi au Vendredi </strong><br/>
+							8h/12h - 13h30/18h <br/>
+							<strong>Le Samedi</strong><br/>
+							9h/17h30 non-stop<br/>
+							<strong>Le Dimanche</strong><br/>
+							Ouverture exceptionnelle
+							</p>
+						</div>
+						<div class="col-md-10">
+							<section class="section section--menu" id="Iris">
+								<nav class="menu menu--iris">
+									<ul class="nav nav-tabs menu__list">
+										<li class="menu__item menu__item--current"><a href="#" class="menu__link">Accueil</a></li>
+										<li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+										<li class="menu__item"><a href="#" class="menu__link">Conception</a></li>
+										<li class="menu__item"><a href="#" class="menu__link">Qui sommes-nous?</a></li>
+										<li><div class="telephone"><a class="btn btn-primary btn-xlg" href="tel:01 45 12 45 13" style="padding: 5px; background-color: rgba(0,0,238,.5); font-size: small;">Reservation <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>01 45 12 45 13</a></div></li>
+									</ul>
+								</nav>
+							</section>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="slogan">
+										<a href="#"><img class="image-slogan" src="images/gazonbande.jpg" alt="Gazon"></a>
+										<h3>Le Gazon de Printemps</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row produits">
+						<h1 class="titre-produits">Sélectionnez votre produit</h1>
+						<div class="col-md-4">
+							<a href="mineral.html"><img alt="Minéral" src="images/mineral.jpg" class="mineral"></a>
+						</div>
+						<div class="col-md-4">
+							<a href="vegetal.html"><img alt="Végétal" src="images/vegetal.jpg" class="vegetal"></a>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img alt="Accessoires" src="images/accessoires.jpg" class="accessoires"></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<ul class="liste_balises">
+								<li class="liste1"> Achetez la quantité dont vous avez besoin</li>
+								<li class="liste2">En panne d’inspiration? Nous vous conseillons et dessinons votre jardin</li>
+								<li class="liste3">Embellisez votre jardin avec notre gamme de paillage variés</li>
+								<li class="liste4">Pas de véhicule adapté? Point jardin vous livre chez vous, petite ou grande quantité</li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<article class="commentaire">
+								<h4>Commentaires</h4>
+								<h5>Anais G.</h5>
+								<blockquote> super magasin</blockquote>
+							</article>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<footer>
+								<p class="text-center text-muted">
+									<small>© 2015 Copyright Point Jardin | Mentions légales</small> 
+								
+								<a class="btn btn-primary btn-xlg text-center" href="tel:01 45 12 45 13" style="padding: 5px; background-color: rgba(0,0,238,.5); font-size: small;">
+		   							Reservation <span class="glyphicon glyphicon-earphone" style="padding-left:10px; padding-right:10px;"></span>01 45 12 45 13</a></p>
+							</footer>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/scripts.js"></script>
+	    <script src="js/classie.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+		</script>
+  	</body>
+</html>
