@@ -8,7 +8,7 @@
 	    <title>Point Jardin</title>
 	
 	    <meta name="description" content="Point Jardin ǀ Matériaux et déco: paillage minéral,végétal, galet, gravier, bâche, bloc ardoise, engrais, gazon, terre végétale, terreau, dalle, sablon, grave">
-	    <meta name="author" content="Cédric et Augustin">
+	    <meta name="author" content="Cédric Oloa et Augustin">
 		
 	    <link href="css/bootstrap.css" rel="stylesheet">
 	    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
